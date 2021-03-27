@@ -7,15 +7,6 @@ import { stripe } from '../services/stripe';
 
 import styles from './home.module.scss';
 
-// Client-side
-// Server-side
-// Static Site Generation
-
-// Post do blog
-
-// Conteudo (SSG)
-// Comentários (Client-side)
-
 interface HomeProps { 
   product: {
     priceId: string;
