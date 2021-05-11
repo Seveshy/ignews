@@ -1,10 +1,9 @@
-import { query as q } from 'faunadb';
-
-import NextAuth from 'next-auth'
-import { session } from 'next-auth/client';
+import NextAuth, { Session } from 'next-auth'
 import Providers from 'next-auth/providers'
 
-import { fauna } from '../../../services/fauna'; 
+import { query as q } from "faunadb"
+import { fauna } from '../../../services/fauna'
+
 
 export default NextAuth({
   providers: [
@@ -15,7 +14,7 @@ export default NextAuth({
     }),
   ],
   callbacks: {
-    async session(session) {
+    async session(session: Session) {
       session.user.email
       try {
         const userActiveSubscription = await fauna.query(
