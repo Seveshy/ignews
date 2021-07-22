@@ -1,10 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { signIn, useSession } from 'next-auth/client';
+import { useRouter } from "next/router"
+
 import { mocked } from 'ts-jest/utils';
-import { useRouter } from 'next/router';
 // import { mocked } from 'ts-jest/utils';
 // import { useSession } from 'next-auth/client';
 import SubscribeButton, { SessionProps } from '.';
+
 
 jest.mock('next-auth/client');
 jest.mock('next/router');

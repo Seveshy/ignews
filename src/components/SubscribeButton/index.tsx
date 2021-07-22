@@ -1,6 +1,6 @@
 import { Session } from "next-auth"
 import { useSession, signIn } from "next-auth/client"
-import { useRouter } from "next/dist/client/router"
+import { useRouter } from "next/router"
 import { api } from "../../services/api"
 import { getStripeJs } from "../../services/stripe-js"
 import styles from "./styles.module.scss"
