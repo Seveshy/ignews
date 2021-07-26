@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import { mocked } from 'ts-jest/utils';
-import { stripe } from '../../services/stripe';
 import Posts, { getStaticProps } from '../../pages/posts';
 import { getPrismicClient } from '../../services/prismic';
 
@@ -44,7 +43,6 @@ describe('Posts page', () => {
         expect(response).toEqual(
             expect.objectContaining({
                 props: {
-
                     posts: [{
                         slug: 'my-new-post',
                         title: 'My new post',
