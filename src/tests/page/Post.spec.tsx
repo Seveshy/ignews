@@ -63,7 +63,10 @@ describe('Posts page', () => {
             })
         } as any)
 
-        const response = await getServerSideProps({} as any)
+
+        const response = await getServerSideProps({
+            params: { slug: 'my-new-post' },
+          } as any);
 
         expect(response).toEqual(
             expect.objectContaining({
